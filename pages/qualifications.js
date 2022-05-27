@@ -4,16 +4,16 @@ import styles from "../styles/Home.module.css";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-export default function Qualifcations() {
+export default function Qualifications() {
   return (
     <>
       <Head>
         <title>
-          Salim Karim&apos;s Qualifications | Full Stack Developer Melbourne
+          About Salim Karim | Full Stack Developer Melbourne
         </title>
       </Head>
       <div className="card">
-        <div className="text-3xl font-bold">📜 Qualifications</div>
+        <div className="text-3xl font-bold">🏠 Home</div>
 
         <div className="p-4">
           <div>Bachelor of Computing </div>

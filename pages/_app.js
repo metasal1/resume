@@ -19,7 +19,8 @@ function MyApp({ Component, pageProps, router }) {
         opacity: 1,
       },
       pageExit : {
-        opacity: 1
+        opacity: 1,
+        backgroundColor: 'white'
       }
     }}
   >

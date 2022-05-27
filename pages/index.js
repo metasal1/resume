@@ -10,8 +10,7 @@ export default function Home() {
       <Head>
         <title>Full Stack Developer Melbourne</title>
       </Head>
-      <div className="center justify-center items-center place-content-center">
-        <div className="w-48 md:w-96 lg:w-256">
+        <div className="">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -30,6 +29,7 @@ export default function Home() {
             }}
           >
             <Image
+              // className="rounded-full"
               src="/salim.png"
               width={400}
               height={400}
@@ -42,7 +42,7 @@ export default function Home() {
           Full Stack Developer
         </p>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-          <Link href="/">
+          <Link href="/home">
             <a className="btn-primary">Home</a>
           </Link>
           <Link href="/contact">
@@ -67,7 +67,6 @@ export default function Home() {
             <a className="btn-primary">Tools</a>
           </Link>
         </div>
-      </div>
     </>
   );
 }
