@@ -1,16 +1,52 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply m-5 py-4 px-4 bg-white text-black font-semibold rounded-lg shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 cursor-pointer;
+  }
+}
 body {
+  text-align: center;
+  text-decoration: dotted;
+  vertical-align: middle;
+  min-height: 95vh;
+  min-width: 90vw;
+  background-color: aqua;
+  border: 5px solid black
+}
+
+ul {
+  list-style-type: none;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #ff008c 0%, rgb(211, 9, 225) 100%);
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-* {
-  box-sizing: border-box;
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
