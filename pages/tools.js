@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-export default function Qualifcations() {
+export default function tools() {
   return (
     <>
       <Head>
@@ -25,7 +25,7 @@ export default function Qualifcations() {
           </sup>
           <div className="typewrite">Postman</div>
           <code>
-            It's getting heavy but it&apos;s a beast of a tool to GET (get it?) and
+            It&apos;s getting heavy but it&apos;s a beast of a tool to GET (get it?) and
             consume all my APIs.
           </code>
           <div className="typewrite">Warp CLI</div>
