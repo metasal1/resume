@@ -29,7 +29,7 @@ export default function Home() {
               },
             }}
           >
-            <Image 
+            <Image
               src="/salim.png"
               width={400}
               height={400}
