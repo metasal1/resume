@@ -13,9 +13,9 @@ export default function Qualifcations() {
         </title>
       </Head>
       <div className="card">
-        <div className="text-5xl font-bold">📜 Qualifications</div>
+        <div className="text-3xl font-bold">📜 Qualifications</div>
 
-        <div className="p-10">
+        <div className="p-4">
           <div>Bachelor of Computing </div>
           <sup>Monash University</sup>
           <div>Diploma of Engineering </div>

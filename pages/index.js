@@ -11,7 +11,7 @@ export default function Home() {
         <title>Full Stack Developer Melbourne</title>
       </Head>
       <div className="center justify-center items-center place-content-center">
-        <div className="md:w-96 lg:w-256">
+        <div className="w-48 md:w-96 lg:w-256">
           <motion.div
             initial="hidden"
             animate="visible"

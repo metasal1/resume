@@ -7,21 +7,19 @@
     @apply -skew-y-3 hover:skew-y-3 m-2 py-2 px-2 bg-white text-black font-semibold shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 cursor-pointer;
   }
   .card {
-    @apply grid bg-white -skew-y-3 p-10 m-10 shadow-2xl
+    @apply grid bg-white -skew-y-3 p-5 m-5 shadow-2xl
   }
   .backarrow {
-    @apply text-5xl m-2 hover:bg-white hover:-skew-y-3 cursor-grab
+    @apply text-5xl m-2 hover:bg-white hover:-skew-y-3 cursor-pointer
   }
   .typewrite {
     @apply bg-black text-white w-max p-2 text-xs
   }
 }
-html {
-  height: 100vh;
-}
+
 body {
+  height: 100vh;
   background: linear-gradient(180deg, #ff008c 0%, rgb(211, 9, 225) 100%);
-  overflow: hidden;
   padding: 0;
   margin: 0;
   display: flex;

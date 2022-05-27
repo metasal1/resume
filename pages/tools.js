@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 export default function tools() {
   return (
@@ -13,7 +12,7 @@ export default function tools() {
         </title>
       </Head>
       <div className="card">
-        <div className="text-5xl font-bold">🧰 Favourite Tools</div>
+        <div className="text-3xl font-bold">🧰 Favourite Tools</div>
 
         <div className="p-1">
           <div className="typewrite">VS Code</div>
