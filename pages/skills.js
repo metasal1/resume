@@ -4,59 +4,38 @@ import styles from "../styles/Home.module.css";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-export default function Home() {
+export default function Qualifcations() {
   return (
     <>
       <Head>
-        <title>Full Stack Developer Melbourne</title>
+        <title>
+          Salim Karim&apos;s Skills | Full Stack Developer Melbourne
+        </title>
       </Head>
-      <div className="center justify-center items-center place-content-center">
-        <div className="w-48 md:w-96 lg:w-256">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {
-                scale: 0.8,
-                opacity: 0,
-              },
-              visible: {
-                scale: 1,
-                opacity: 1,
-                transition: {
-                  delay: 0.4,
-                },
-              },
-            }}
-          >
-            <Image
-              src="/salim.png"
-              width={400}
-              height={400}
-              alt="Artist's impression of Salim"
-            />
-          </motion.div>
-        </div>
-        <div className="text-4xl md:text-6xl lg:7-xl">Salim Karim</div>
-        <p className="decoration-dotted -skew-y-3 bg-gray-200 m-3">
-          Full Stack Developer
-        </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3">
-        <Link href="/">
-          <a className="btn-primary">Home</a>
-          </Link><Link href="/contact">
-          <a className="btn-primary">Contact</a>
-          </Link><Link href="/skills">
-          <a className="btn-primary">Skills</a>
-          </Link><Link href="/projects">
-          <a className="btn-primary">Projects</a>
-          </Link><Link href="/experience">
-          <a className="btn-primary">Experience</a>
-          </Link><Link href="/qualifications">
-          <a className="btn-primary">Qualifications</a>
-          </Link>
+      <div className="card">
+        <div className="text-5xl font-bold">👨🏽‍💻 Skills</div>
+
+        <div className="">
+          <div className="typewrite">HTML</div>
+          <code>Marking up text using this language makes me feel hyper!</code>
+          <div className="typewrite">CSS</div>
+          <code>Style sheets that give you the 💩 but sure make&apos;s this site look good!</code>
+          <div className="typewrite">React JS</div>
+          <code>Fell in 💓 years ago - but sometimes it feels like it&apos;s not mutual!</code>
+          <div className="typewrite">Next JS</div>
+          <code>All those nights wasted on ExpressJS makes me cry - but this is the future!</code>
+          <div className="typewrite">Node JS</div>
+          <code>The Backend Server to put all other fat, heavy and embrassing servers to shame!</code>
+          <div className="typewrite">TypeScript</div>
+          <code>Love it or hate it! It saves your 🎒-side enough times and deserves more respect!</code>
+
         </div>
       </div>
+      <Link href="/">
+        <a className="backarrow">
+          &larr;
+        </a>
+      </Link>
     </>
   );
 }

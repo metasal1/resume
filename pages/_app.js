@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { motion, AnimatePresence} from "framer-motion";
 import Link from "next/link";
+import Ticker from "./components/Ticker";
 
 function MyApp({ Component, pageProps, router }) {
   return(
@@ -18,18 +19,15 @@ function MyApp({ Component, pageProps, router }) {
         opacity: 1,
       },
       pageExit : {
-        backgroundColor: 'white',
-        filter: `invert()`,
         opacity: 1
       }
     }}
   >
     <Component {...pageProps} />
-    <Link href="/">
-      <a className="text-5xl m-2 hover:bg-white hover:-skew-y-6 cursor-grab">&larr;</a>
-      </Link>
-    <div>&copy; {new Date().getFullYear()}</div>
+
+  <Ticker />
   </motion.div>
+    <div className="text-xs font-thin p-2 text-white">&copy; {new Date().getFullYear()}</div>
   </AnimatePresence>
 
   )

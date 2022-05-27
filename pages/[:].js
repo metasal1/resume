@@ -9,20 +9,20 @@ export default function Qualifcations() {
     <>
       <Head>
         <title>
-          Salim Karim&apos;s Projects | Full Stack Developer Melbourne
+          Salim Karim&apos;s Qualifications | Full Stack Developer Melbourne
         </title>
       </Head>
       <div className="card">
-        <div className="text-5xl font-bold">📽 Personal Projects</div>
+        <div className="text-5xl font-bold">😬 Error!</div>
 
         <div className="p-10">
-          <div>Twilio SMS Verify Demo</div>
-          <div>SolWho.com</div>
-          <div>Cryptmas.com.au</div>
+          Whoops! I didn&apos;t put anything on this page - or maybe I didn&apos;t want you to see it anymore!
         </div>
       </div>
       <Link href="/">
-        <a className="backarrow">&larr;</a>
+        <a className="backarrow">
+          &larr;
+        </a>
       </Link>
     </>
   );
