@@ -16,10 +16,10 @@
     @apply bg-black text-white w-max p-2 text-xs
   }
 }
- 
-body {
+html {
   height: 100vh;
-  border: 5px solid black;
+}
+body {
   background: linear-gradient(180deg, #ff008c 0%, rgb(211, 9, 225) 100%);
   overflow: hidden;
   padding: 0;
