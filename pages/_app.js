@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Ticker from "./components/Ticker";
-import React from "react";
 
 function MyApp({ Component, pageProps, router }) {
 
