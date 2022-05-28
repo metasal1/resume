@@ -52,8 +52,8 @@ export default function Home() {
             <Image
               // className="rounded-full"
               src="/salim.png"
-              width={400}
-              height={400}
+              width={200}
+              height={200}
               alt="Artist's impression of Salim"
             />
           </motion.div>
