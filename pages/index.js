@@ -1,16 +1,35 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import React from "react";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
 export default function Home() {
+
+  const  [ scheme, setScheme] = React.useState('coke');
+
+  const handleChange = (event) => {
+    document.body.classList.remove(scheme)
+    setScheme(event.target.value);
+    document.body.classList.add(event.target.value)
+  }
+
   return (
     <>
       <Head>
         <title>Full Stack Developer Melbourne</title>
       </Head>
         <div className="">
+        <div >
+        <select className="btn-primary" value={scheme} onChange={handleChange} name="schemes" id="schemes">
+          <option value="coke">Coca-Cola</option>
+          <option value="pepsi">Pepsi</option>
+          <option value="fanta">Fanta</option>
+          <option value="sprite">Sprite</option>
+        </select>
+      </div>
+      {/* <div>{scheme}</div> */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -38,7 +57,7 @@ export default function Home() {
           </motion.div>
         </div>
         <div className="text-4xl md:text-6xl lg:7-xl">Salim Karim</div>
-        <p className="decoration-dotted -skew-y-3 bg-gray-200 m-3">
+        <p className="decoration-dotted -skew-y-3 bg-white opacity-75 m-3">
           Full Stack Developer
         </p>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
@@ -66,7 +85,9 @@ export default function Home() {
           <Link href="/tools">
             <a className="btn-primary">Tools</a>
           </Link>
+
         </div>
+
     </>
   );
 }

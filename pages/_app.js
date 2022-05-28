@@ -1,37 +1,43 @@
 import "../styles/globals.css";
-import { motion, AnimatePresence} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Ticker from "./components/Ticker";
+import React from "react";
 
 function MyApp({ Component, pageProps, router }) {
-  return(
+
+  
+
+  return (
     <AnimatePresence>
-  <motion.div
-  key={router.route}
-    initial="pageInitial"
-    animate="pageAnimate"
-    exit="pageExit"
-    variants={{
-      pageInitial: {
-        opacity: 0,
-      },
-      pageAnimate: {
-        opacity: 1,
-      },
-      pageExit : {
-        opacity: 1,
-        backgroundColor: 'white'
-      }
-    }}
-  >
-    <Component {...pageProps} />
+      
+      <motion.div
+        key={router.route}
+        initial="pageInitial"
+        animate="pageAnimate"
+        exit="pageExit"
+        variants={{
+          pageInitial: {
+            opacity: 0,
+          },
+          pageAnimate: {
+            opacity: 1,
+          },
+          pageExit: {
+            opacity: 1,
+            backgroundColor: "pink",
+          },
+        }}
+      >
+        <Component {...pageProps} />
 
-  <Ticker />
-  </motion.div>
-    <div className="text-xs font-thin p-2 text-white">&copy; {new Date().getFullYear()}</div>
-  </AnimatePresence>
-
-  )
+        <Ticker />
+      </motion.div>
+      <div className="text-xs font-thin p-2 text-white">
+        &copy; {new Date().getFullYear()}
+      </div>
+    </AnimatePresence>
+  );
 }
 
 export default MyApp;
