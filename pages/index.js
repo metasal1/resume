@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import React from "react";
+import Typewriter from 'typewriter-effect';
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -14,6 +15,7 @@ export default function Home() {
     setScheme(event.target.value);
     document.body.classList.add(event.target.value)
   }
+
 
   return (
     <>
@@ -57,9 +59,23 @@ export default function Home() {
           </motion.div>
         </div>
         <div className="text-4xl md:text-6xl lg:7-xl">Salim Karim</div>
-        <p className="decoration-dotted -skew-y-3 bg-white opacity-75 m-3">
-          Full Stack Developer
-        </p>
+        <div className="decoration-dotted -skew-y-3 bg-white opacity-75 m-3">
+        <Typewriter
+  onInit={(typewriter) => {
+    typewriter.typeString('Web Developer')
+      .pauseFor(500)
+      .deleteAll()
+      .typeString('Front End Developer')
+      .pauseFor(500)
+      .deleteAll()
+      .typeString('Back End Developer')
+      .pauseFor(500)
+      .deleteAll()
+      .typeString('Full Stack Developer!')
+      .start();
+  }}
+/>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
           <Link href="/home">
             <a className="btn-primary">Home</a>
