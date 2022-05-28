@@ -31,7 +31,6 @@ export default function Home() {
           <option value="sprite">Sprite</option>
         </select>
       </div>
-      {/* <div>{scheme}</div> */}
           <motion.div
             initial="hidden"
             animate="visible"
