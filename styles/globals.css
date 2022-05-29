@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer components {
   .btn-primary {
     @apply -skew-y-3 m-2 py-2 px-2 bg-white text-black font-semibold shadow-md hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 cursor-pointer;
@@ -11,6 +10,21 @@
   }
   .backarrow {
     @apply text-5xl m-2 hover:bg-white hover:-skew-y-3 cursor-pointer
+  }
+  .tooltip {
+    @apply invisible absolute bg-white text-black p-2 border-2
+  }
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50
+  }
+  .tenure {
+    @apply bg-spritesecondary w-1/4 text-xs 
+  }
+.textbox {
+  @apply text-xs m-1 p-1
+}
+  .bold {
+    @apply font-bold
   }
   .typewrite {
     @apply bg-black text-white w-max p-2 text-xs
@@ -27,11 +41,24 @@
   .sprite {
     background: linear-gradient(180deg, #008b47 0%, #f8cd24 100%)
   }
+.weblink {
+  @apply hover:bg-pepsisecondary hover:text-white cursor-pointer font-bold m-2
 }
-
-body {
+  .problem {
+    @apply bg-cokeprimary text-white has-tooltip w-3 text-xs text-center min-h-min
+  }
+  .solution {
+    @apply bg-spriteprimary text-white has-tooltip w-3 text-xs text-center
+  }
+  .technology {
+    @apply bg-fantaprimary text-white has-tooltip w-3 text-xs text-center
+  }
+}
+html {
   height: 100vh;
-  /* background: linear-gradient(180deg, #ff008c 0%, rgb(211, 9, 225) 100%); */
+}
+body {
+  /* height: 100vh; */
   background: linear-gradient(180deg, #f40009 0%, #1e1e1e 100%);
   padding: 0;
   margin: 0;
@@ -123,4 +150,8 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+p {
+  font-size:smaller;
 }
