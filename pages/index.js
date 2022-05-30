@@ -7,11 +7,11 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import Link from "next/link";
 export default function Home() {
-  const [scheme, setScheme] = React.useState("coke");
+  const [flavour, setFlavour] = React.useState("blank");
 
   const handleChange = (event) => {
-    document.body.classList.remove(scheme);
-    setScheme(event.target.value);
+    document.body.classList.remove(flavour);
+    setFlavour(event.target.value);
     document.body.classList.add(event.target.value);
   };
 
@@ -24,11 +24,13 @@ export default function Home() {
         <div>
           <select
             className="btn-primary"
-            value={scheme}
+            value={flavour}
             onChange={handleChange}
-            name="schemes"
-            id="schemes"
+            name="flavour"
+            id="flavour"
           >
+
+            <option value="blank" selected="selected" >Choose your flavour:</option>
             <option value="coke">Coca-Cola</option>
             <option value="pepsi">Pepsi</option>
             <option value="fanta">Fanta</option>

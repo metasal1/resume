@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'CocaColaii';
+  src: url('CocaColaii.eot');
+  src: url('CocaColaii.eot?#iefix') format('embedded-opentype'),
+       url('CocaColaii.svg#CocaColaii') format('svg'),
+       url('CocaColaii.ttf') format('truetype'),
+       url('CocaColaii.woff') format('woff'),
+       url('CocaColaii.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

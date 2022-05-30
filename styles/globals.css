@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer components {
   .btn-primary {
     @apply -skew-y-3 m-2 py-2 px-2 bg-white text-black font-semibold shadow-md hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 cursor-pointer;
@@ -30,16 +31,20 @@
     @apply bg-black text-white w-max p-2 text-xs
   }
   .coke {
-    background: linear-gradient(180deg, #f40009 0%, #1e1e1e 100%)
+   background: linear-gradient(180deg, #f40009 0%, #1e1e1e 100%);
+   font-family: 'Coca Cola ii' 
   }
   .pepsi {
-    background: linear-gradient(180deg, #c9002b 0%, #004b93 100%)
+    background: linear-gradient(180deg, #c9002b 0%, #004b93 100%);
+    font-family: 'PEPSI_pl'
   }
   .fanta {
-    background: linear-gradient(180deg, #f7941e 0%, #2d3092 100%)
+    background: linear-gradient(180deg, #f7941e 0%, #2d3092 100%);
+    font-family: 'Fanta-Regular'
   }
   .sprite {
-    background: linear-gradient(180deg, #008b47 0%, #f8cd24 100%)
+    background: linear-gradient(180deg, #008b47 0%, #f8cd24 100%);
+    font-family: 'Crillee Bold Italic Plain'
   }
 .weblink {
   @apply hover:bg-pepsisecondary hover:text-white cursor-pointer font-bold m-2
@@ -67,6 +72,7 @@ body {
   text-align: center;
   align-items: center;
   vertical-align: middle;
+  font-family: 'sans-serif'
 }
 
 ul {

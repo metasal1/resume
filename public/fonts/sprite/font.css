@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Crillee Bold Italic Plain';
+  src: url('Crillee Bold Italic Plain.eot');
+  src: url('Crillee Bold Italic Plain.eot?#iefix') format('embedded-opentype'),
+       url('Crillee Bold Italic Plain.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CrilleeBoldItalicPlain';
+  src: url('CrilleeBoldItalicPlain.svg#CrilleeBoldItalicPlain') format('svg'),
+       url('CrilleeBoldItalicPlain.ttf') format('truetype'),
+       url('CrilleeBoldItalicPlain.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

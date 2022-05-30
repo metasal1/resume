@@ -1,4 +1,3 @@
-// const colors = require('tailwindcss/colors');
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -19,7 +18,12 @@ module.exports = {
       spriteprimary: "#008b47",
       spritesecondary: "#f8cd24",
     },
-    extend: {},
+    extend: {
+        fontFamily: {
+          coke: ["Coca Cola ii", "sans-serif"]
+        },
+      },
   },
+  
   plugins: [],
 };

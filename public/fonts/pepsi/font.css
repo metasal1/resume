@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'PEPSI_pl';
+  src: url('PEPSI_pl.eot');
+  src: url('PEPSI_pl.eot?#iefix') format('embedded-opentype'),
+       url('PEPSI_pl.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

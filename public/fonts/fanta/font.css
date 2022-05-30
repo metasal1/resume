@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Fanta-Regular';
+  src: url('Fanta-Regular.svg#Fanta-Regular') format('svg'),
+       url('Fanta-Regular.ttf') format('truetype'),
+       url('Fanta-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fanta_regular_by_pependejo-dbvx61f';
+  src: url('fanta_regular_by_pependejo-dbvx61f.eot');
+  src: url('fanta_regular_by_pependejo-dbvx61f.eot?#iefix') format('embedded-opentype'),
+       url('fanta_regular_by_pependejo-dbvx61f.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
