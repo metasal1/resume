@@ -24,6 +24,8 @@ export default function Qualifcations() {
           <code>Cloud Functions </code>
           <div className="typewrite">Twilio</div>
           <code>SMS, Verify, Auth Codes, Serverless Functions</code>
+          <div className="typewrite">MongoDB</div>
+          <code>Atlas, Realm, Clusters</code>
           <div className="typewrite">Zendesk</div>
           <code>Custom Apps, API&apos;s, Automations</code>
         </div>
