@@ -23,21 +23,11 @@ export default function Skills(props) {
         <div className="text-5xl font-bold">👨🏽‍💻 Skills</div>
 
         <div className="">
-          <Link href="/backend">
-            <a className="btn-primary">Backend</a>
-          </Link>{" "}
-          <Link href="/frontend">
-            <a className="btn-primary">Frontend</a>
-          </Link>{" "}
-          <Link href="/cloud">
-            <a className="btn-primary">Cloud</a>
-          </Link>{" "}
-          <Link href="/ci-cd">
-            <a className="btn-primary">CI/CD</a>
-          </Link>{" "}
-          <Link href="/tools">
-            <a className="btn-primary">Tools</a>
-          </Link>
+            <a onClick={()=>setSearch('backend')} className="btn-primary">Backend</a>
+            <a onClick={()=>setSearch('frontend')} className="btn-primary">Frontend</a>
+            <a onClick={()=>setSearch('cloud')} className="btn-primary">Cloud</a>
+            <a onClick={()=>setSearch('ci/cd')} className="btn-primary">CI/CD</a>
+            <a onClick={()=>setSearch('tool')} className="btn-primary">Tools</a>
           <div>
             <input
               className="text-md pl-1 border-2 mt-4 w-1/4"
