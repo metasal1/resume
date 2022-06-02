@@ -120,7 +120,7 @@ export default function Home(props) {
   );
 }
 
-export async function getServerSideProps({req}) {
+export async function getServerSideProps({ req }) {
   try {
     const forwarded = req.headers["x-forwarded-for"];
     var ip = forwarded
@@ -128,7 +128,7 @@ export async function getServerSideProps({req}) {
       : req.connection.remoteAddress;
 
     if (ip === "::1") {
-      ip = "";
+      ip = "127.0.0.1";
     }
 
     const ipUrl = `http://ip-api.com/json/${ip}`;
@@ -145,14 +145,13 @@ export async function getServerSideProps({req}) {
       .insertOne({
         ip: ip,
         date: date,
-        host: host,
         location: location,
       });
 
-      console.log(result.insertedId.toString());
+    console.log(result.insertedId.toString());
 
     return {
-      props: { isConnected: true, results: JSON.stringify(results) },
+      props: { isConnected: true },
     };
   } catch (e) {
     console.error(e);
