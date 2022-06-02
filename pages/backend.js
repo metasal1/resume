@@ -22,7 +22,7 @@ export default function backend() {
             The Backend Server to put all other fat, heavy and embrassing
             servers to shame!
           </code>
-          <div className="typewrite">REST API's</div>
+          <div className="typewrite">REST API&apos;s</div>
           <div className="tenure">3 years</div>
           <code>
             The Backend Server to put all other fat, heavy and embrassing
