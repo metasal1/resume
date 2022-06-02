@@ -45,7 +45,22 @@ export default function Qualifcations() {
           >
             TokensHit.xyz
           </div>
-          <div>All the tokens listed on the Solana blockchain curated for ranking.</div>
+          <div>
+            All the tokens listed on the Solana blockchain curated for ranking.
+          </div>
+
+          <div>Lookup owners of domains by name or twitter handle</div>
+          <div
+            className="weblink"
+            onClick={() =>
+              window.open("https://mflix-xi.vercel.app/", "_blank")
+            }
+          >
+            MongoDb Demo
+          </div>
+          <div>
+            Demo displaying read and write performance of the Mongo DB platform.
+          </div>
         </div>
       </div>
       <Link href="/">

@@ -6,64 +6,93 @@
   .btn-primary {
     @apply -skew-y-3 m-2 py-2 px-2 bg-white text-black font-semibold shadow-md hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-75 cursor-pointer;
   }
+
   .card {
     @apply grid bg-white -skew-y-3 p-5 m-5 shadow-2xl
   }
+
   .backarrow {
-    @apply text-5xl m-2 hover:bg-white hover:-skew-y-3 cursor-pointer
+    @apply text-5xl m-2 text-white hover:bg-spritesecondary hover:-skew-y-3 cursor-pointer
   }
+
   .tooltip {
     @apply invisible absolute bg-white text-black p-2 border-2
   }
+
   .has-tooltip:hover .tooltip {
     @apply visible z-50
   }
+
   .tenure {
-    @apply bg-spritesecondary w-1/4 text-xs 
+    @apply bg-spritesecondary w-1/4 text-xs
   }
-.textbox {
-  @apply text-xs m-1 p-1
-}
+
+  .textbox {
+    @apply text-xs m-1 p-1
+  }
+
   .bold {
     @apply font-bold
   }
+
   .typewrite {
-    @apply bg-black text-white w-max p-2 text-xs
+    @apply bg-black text-white w-max p-2 text-xs border-2 
   }
+  .skillname {
+    @apply bg-spritesecondary text-cokesecondary w-max pl-1 pr-1 text-xs rounded-md absolute left-1 top-1
+  }
+  .skilldescription {
+    @apply text-black
+  }
+  .skillcategory {
+    @apply bg-pepsiprimary rounded-md text-white w-max p-1 text-xs absolute right-1 top-1
+  }
+  .skillperiod {
+    @apply bg-black text-white w-max p-1 text-xs
+  }
+
   .coke {
-   background: linear-gradient(180deg, #f40009 0%, #1e1e1e 100%);
-   font-family: 'Coca Cola ii' 
+    background: linear-gradient(180deg, #f40009 0%, #1e1e1e 100%);
+    font-family: 'Coca Cola ii'
   }
+
   .pepsi {
     background: linear-gradient(180deg, #c9002b 0%, #004b93 100%);
     font-family: 'PEPSI_pl'
   }
+
   .fanta {
     background: linear-gradient(180deg, #f7941e 0%, #2d3092 100%);
     font-family: 'Fanta-Regular'
   }
+
   .sprite {
     background: linear-gradient(180deg, #008b47 0%, #f8cd24 100%);
     font-family: 'Crillee Bold Italic Plain'
   }
-.weblink {
-  @apply hover:bg-pepsisecondary hover:text-white cursor-pointer font-bold m-2
-}
+
+  .weblink {
+    @apply hover:bg-pepsisecondary hover:text-white cursor-pointer font-bold m-2
+  }
+
   .problem {
     @apply bg-cokeprimary text-white has-tooltip w-3 text-xs text-center min-h-min
   }
+
   .solution {
     @apply bg-spriteprimary text-white has-tooltip w-3 text-xs text-center
   }
+
   .technology {
     @apply bg-fantaprimary text-white has-tooltip w-3 text-xs text-center
   }
 }
+
 html {
   height: 100vh;
 }
+
 body {
-  /* height: 100vh; */
   background: linear-gradient(180deg, #f40009 0%, #1e1e1e 100%);
   padding: 0;
   margin: 0;
@@ -95,6 +124,7 @@ ul {
   align-items: center;
   cursor: pointer;
 }
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -135,15 +165,15 @@ ul {
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -159,5 +189,5 @@ input:checked + .slider:before {
 }
 
 p {
-  font-size:smaller;
+  font-size: smaller;
 }

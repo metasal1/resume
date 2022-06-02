@@ -6,40 +6,21 @@ import Ticker from "./components/Ticker";
 function MyApp({ Component, pageProps, router }) {
   return (
     <AnimatePresence>
-      <motion.div
-        onClick={(e) => e.stopPropagation()}
-        key={router.route}
-        initial="pageInitial"
-        animate="pageAnimate"
-        exit="pageExit"
-        variants={{
-          pageInitial: {
-            opacity: 0.1,
-          },
-          pageAnimate: {
-            opacity: 1,
-          },
-          pageExit: {
-            opacity: 0,
-            transition: {
-              duration: 1,
-            },
-          },
-        }}
-      >
+      <div>
         <Component {...pageProps} />
         <Ticker />
-      <div className="block text-xs font-thin p-2 text-white">
-        &copy; {new Date().getFullYear()} {" | "}
-        <a
-        className="hover:underline"
-        href="https://github.com/metasal1/resume"
-        target="_blank" rel="noreferrer"
-        >
-          Feedback?
-        </a>  
+        <div className="block text-xs font-thin p-2 text-white">
+          &copy; {new Date().getFullYear()} {" | "}
+          <a
+            className="hover:underline"
+            href="https://github.com/metasal1/resume"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Feedback?
+          </a>
+        </div>
       </div>
-          </motion.div>
     </AnimatePresence>
   );
 }
