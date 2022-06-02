@@ -3,12 +3,16 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import React from "react";
 import Typewriter from "typewriter-effect";
+import clientPromise from "../lib/mongodb";
+const uri = process.env.MONGO_URI;
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-export default function Home() {
+export default function Home(props) {
   const [flavour, setFlavour] = React.useState("blank");
 
+  var connected = props.isConnected ? "🟢" : "🔴";
+  console.log(connected);
   const handleChange = (event) => {
     document.body.classList.remove(flavour);
     setFlavour(event.target.value);
@@ -29,9 +33,7 @@ export default function Home() {
             name="flavour"
             id="flavour"
           >
-            <option value="blank" selected="selected">
-              Choose your flavour:
-            </option>
+            <option value="blank">Choose your flavour:</option>
             <option value="coke">Coca-Cola</option>
             <option value="pepsi">Pepsi</option>
             <option value="fanta">Fanta</option>
@@ -116,4 +118,46 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps({req}) {
+  try {
+    const forwarded = req.headers["x-forwarded-for"];
+    var ip = forwarded
+      ? forwarded.split(/, /)[0]
+      : req.connection.remoteAddress;
+
+    if (ip === "::1") {
+      ip = "";
+    }
+
+    const ipUrl = `http://ip-api.com/json/${ip}`;
+    const ipRes = await fetch(ipUrl);
+    const ipJson = await ipRes.json();
+    const location = ipJson.city + " " + ipJson.country;
+
+    const date = new Date();
+
+    const client = await clientPromise;
+    const result = await client
+      .db("salimsresume")
+      .collection("visitors")
+      .insertOne({
+        ip: ip,
+        date: date,
+        host: host,
+        location: location,
+      });
+
+      console.log(result.insertedId.toString());
+
+    return {
+      props: { isConnected: true, results: JSON.stringify(results) },
+    };
+  } catch (e) {
+    console.error(e);
+    return {
+      props: { isConnected: false },
+    };
+  }
 }
