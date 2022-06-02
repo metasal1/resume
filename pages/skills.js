@@ -41,28 +41,64 @@ export default function Skills(props) {
           <div>
             <input
               className="text-md pl-1 border-2 mt-4 w-1/4"
+              autoComplete="false"
+              spellCheck="false"
               type="search"
-              placeholder="Filtering coming soon!..."
+              placeholder="Filter..."
               onChange={(e) => {
-                setSearch(e.target.value);
+                setSearch(e.target.value.trim());
               }}
             ></input>
           </div>
         </div>
-        <div className="italic">{results.length} skills loaded</div>
         <div>
-          {results.map((element) => {
-            return (
-              <div className="card" key="element._id">
-                <div className="skillname">{element.name}</div>
-                <div className="skilldescription">{element.description}</div>
-                <div className="skillperiod">
-                  {element.period || "not provided"}
+          <div className="italic">
+            {
+              results.filter((skill) => {
+                if (search === "") {
+                  return skill;
+                } else if (
+                  skill.name?.toLowerCase().includes(search.toLowerCase()) ||
+                  skill.description
+                    ?.toLowerCase()
+                    .includes(search.toLowerCase()) ||
+                  skill.period?.toLowerCase().includes(search.toLowerCase()) ||
+                  skill.category?.toLowerCase().includes(search.toLowerCase())
+                ) {
+                  return skill;
+                }
+              }).length
+            }{" "}
+            skills loaded
+          </div>
+
+          {results
+            .filter((skill) => {
+              if (search === "") {
+                return skill;
+              } else if (
+                skill.name?.toLowerCase().includes(search.toLowerCase()) ||
+                skill.description
+                  ?.toLowerCase()
+                  .includes(search.toLowerCase()) ||
+                skill.period?.toLowerCase().includes(search.toLowerCase()) ||
+                skill.category?.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return skill;
+              }
+            })
+            .map((skill) => {
+              return (
+                <div className="card" key="skill._id">
+                  <div className="skillname">{skill.name}</div>
+                  <div className="skilldescription">{skill.description}</div>
+                  <div className="skillperiod">
+                    {skill.period || "not provided"}
+                  </div>
+                  <div className="skillcategory">{skill.category || "n/a"}</div>
                 </div>
-                <div className="skillcategory">{element.category || "n/a"}</div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
       <Link href="/">
@@ -73,7 +109,6 @@ export default function Skills(props) {
 }
 
 export async function getServerSideProps(context) {
-
   try {
     const client = await clientPromise;
     const cursor = client.db("salimsresume").collection("skills").find({});
