@@ -5,7 +5,6 @@ import styles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 export default function Contact() {
-
   return (
     <>
       <Head>
@@ -15,16 +14,35 @@ export default function Contact() {
       </Head>
       <div className="card">
         <div className="text-5xl font-bold">📇 Contact</div>
-
-        <div className="p-10">
-         <div className="cursor-pointer" onClick={()=> window.location.href='tel:+61401222228'}>0401 222 228</div>
-         <div className="cursor-pointer" onClick={()=> window.location.href='mailto:salim@outlook.com.au?subject=I want to hire you!&body=When can you start?'}>salim@outlook.com.au</div>
+        <div className="card rounded-full font-bold">
+          ☎️ CALL <br />
+          <a className="hover:underline font-normal" href="tel:+61401222228">
+            🇦🇺 +61 401 222 228 <br />
+          </a>
+          <a className="hover:underline font-normal" href="tel:+17868725140">
+            🇺🇸 +1 786 872 5140
+          </a>
         </div>
+        <div className="card rounded-full font-bold">
+          💬 TEXT
+          <a className="hover:underline font-normal" href="sms:+61401222228">
+            0401 222 228
+          </a>
+        </div>
+        <div className="card rounded-full font-bold">
+          ✉️ EMAIL <br />
+          <a className="hover:underline font-normal" href="mailto:salim@outlook.com.au?subject=We want to hire you!&body=When can you start?">
+            salim@outlook.com.au
+          </a>
+        </div>
+        <div className="card rounded-full font-bold">
+          📮 VOICEMAIL
+          <audio controls></audio>
+        </div>
+       
       </div>
       <Link href="/">
-        <a className="backarrow">
-          &larr;
-        </a>
+        <a className="backarrow">&larr;</a>
       </Link>
     </>
   );
