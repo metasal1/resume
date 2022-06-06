@@ -34,6 +34,9 @@ export default function Contact() {
           <a className="hover:underline font-normal" href="mailto:salim@outlook.com.au?subject=We want to hire you!&body=When can you start?">
             salim@outlook.com.au
           </a>
+          <Link href="/email">
+          <a>✉️</a>
+          </Link>
         </div>
         <div className="card rounded-full font-bold">
           📮 VOICEMAIL

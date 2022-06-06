@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "confetti-js": "^0.0.18",
     "framer-motion": "^6.3.4",
     "moment": "^2.29.3",
