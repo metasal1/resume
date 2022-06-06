@@ -4,8 +4,8 @@ export default function handler(req, res) {
     const sgMail = require("@sendgrid/mail");
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-      to: "salim@outlook.com.au",
-      from: "imsjk8@gmail.com", // Use the email address or domain you verified above
+      to: process.env.OUTLOOK,
+      from: process.env.GMAIL, // Use the email address or domain you verified above
       subject: "Salims Resume App", // 'Sending with Twilio SendGrid is Fun',
       text: message, //'and easy to do anywhere, even with Node.js',
       html: message, // '<strong>and easy to do anywhere, even with Node.js</strong>',

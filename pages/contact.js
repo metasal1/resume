@@ -14,33 +14,24 @@ export default function Contact() {
       </Head>
       <div className="card">
         <div className="text-5xl font-bold">📇 Contact</div>
-        <div className="card rounded-full font-bold">
-          ☎️ CALL <br />
-          <a className="hover:underline font-normal" href="tel:+61401222228">
-            🇦🇺 +61 401 222 228 <br />
-          </a>
-          <a className="hover:underline font-normal" href="tel:+17868725140">
-            🇺🇸 +1 786 872 5140
-          </a>
+        <div className="card">☎️ CALL
+<div className="btn-primary">🇦🇺 +61 401 222 228</div>
+<div className="btn-primary"> 🇺🇸 +1 786 872 5140</div>
         </div>
-        <div className="card rounded-full font-bold">
+        <div className="btn-primary">
           💬 TEXT
           <a className="hover:underline font-normal" href="sms:+61401222228">
-            0401 222 228
           </a>
         </div>
         <Link href="/email">
           <div className="btn-primary">
             ✉️ EMAIL <br />
-            <a
-              className="hover:underline font-normal"
-              href="mailto:salim@outlook.com.au?subject=We want to hire you!&body=When can you start?"
-            ></a>
+           
           </div>
         </Link>
-        <div className="card rounded-full font-bold">
+        <div className="btn-primary">
           📮 VOICEMAIL
-          <audio controls></audio>
+          <audio className="m-auto" controls></audio>
         </div>
       </div>
       <Link href="/">
