@@ -19,11 +19,21 @@ module.exports = {
       spritesecondary: "#f8cd24",
     },
     extend: {
-        fontFamily: {
-          coke: ["Coca Cola ii", "sans-serif"]
-        },
+      fontFamily: {
+        coke: ["Coca Cola ii", "sans-serif"],
       },
+      keyframes: {
+        exit: {
+          '0%': { transform: 'scale(1.0) rotate(0deg)' },
+          '50%':  { transform: 'rotate(340deg) translate(-300px,0px)' },
+          '100%': { transform: 'scale(0.5) rotate(5deg) translate(1140px,-137px)'}
+        }
+      },
+      animation: {
+        exit: 'exit 2s ease-in-out',
+      }
+    },
   },
-  
+
   plugins: [],
 };

@@ -29,20 +29,19 @@ export default function Contact() {
             0401 222 228
           </a>
         </div>
-        <div className="card rounded-full font-bold">
-          ✉️ EMAIL <br />
-          <a className="hover:underline font-normal" href="mailto:salim@outlook.com.au?subject=We want to hire you!&body=When can you start?">
-            salim@outlook.com.au
-          </a>
-          <Link href="/email">
-          <a>✉️</a>
-          </Link>
-        </div>
+        <Link href="/email">
+          <div className="btn-primary">
+            ✉️ EMAIL <br />
+            <a
+              className="hover:underline font-normal"
+              href="mailto:salim@outlook.com.au?subject=We want to hire you!&body=When can you start?"
+            ></a>
+          </div>
+        </Link>
         <div className="card rounded-full font-bold">
           📮 VOICEMAIL
           <audio controls></audio>
         </div>
-       
       </div>
       <Link href="/">
         <a className="backarrow">&larr;</a>
