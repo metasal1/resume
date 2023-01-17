@@ -22,6 +22,8 @@ export default function Qualifications() {
           <sup>RMIT</sup>
           <div>Certificate IV in Training</div>
           <sup> Box Hill Institute</sup>
+          <div>Certified Custom Apps Developer</div>
+          <sup>Zendesk</sup>
         </div>
       </div>
       <Link href="/">

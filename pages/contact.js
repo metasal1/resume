@@ -15,18 +15,23 @@ export default function Contact() {
       <div className="card">
         <div className="text-5xl font-bold">📇 Contact</div>
         <div className="card">☎️ CALL
-<div className="btn-primary">🇦🇺 +61 401 222 228</div>
-<div className="btn-primary"> 🇺🇸 +1 786 872 5140</div>
-        </div>
-        <div className="btn-primary">
-          💬 TEXT
-          <a className="hover:underline font-normal" href="sms:+61401222228">
+          <a href="tel:+61401222228" target="_blank" rel="noreferrer">
+            <div className="btn-primary">🇦🇺 +61 401 222 228</div>
+          </a>
+          <a href="tel:+17868725140" target="_blank" rel="noreferrer">
+
+            <div className="btn-primary"> 🇺🇸 +1 786 872 5140</div>
           </a>
         </div>
+        <Link href="/sms">
+          <div className="btn-primary">
+            💬 SMS
+          </div>
+        </Link>
         <Link href="/email">
           <div className="btn-primary">
             ✉️ EMAIL <br />
-           
+
           </div>
         </Link>
         <div className="btn-primary">
