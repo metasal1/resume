@@ -22,7 +22,7 @@ export default function Home(props) {
   return (
     <>
       <Head>
-        <title>Full Stack Developer Melbourne</title>
+        <title>Full Stack Engineer Melbourne</title>
       </Head>
       <div className="">
         <div>
